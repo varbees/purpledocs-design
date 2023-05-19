@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500;0,600;0,700;1,400&display=swap"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:ital,wght@0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
 
@@ -16,30 +17,102 @@
   </head>
 
   <body>
-    <section class="section-hero">
-      <div class="hero">
-        <div class="hero-text-box">
-          <h1 class="heading-primary">The way you always wanted to read docs</h1>
-          <p class="hero-description">Simplify your coding process with our centralized platform. Access all tech
-            documentation, from languages to
-            libraries, in one place. Focus on what matters - Simplify your coding experience with us.</p>
-          <a href="#" class="btn btn--full margin-right-sm">Read Docs</a>
-          <a href="#" class="btn btn--outline">Join the Community &rarr;</a>
-          <div class="reviewers">
-            <div class="reviewer-imgs">
-              <!-- random user images here -->
+    <header class="header">
+      <img class="logo" src="images/purpledocslogo.gif" alt="purpledocs logo" srcset="">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">Section 1</a></li>
+          <li><a class="main-nav-link" href="#">Section 2</a></li>
+          <li><a class="main-nav-link" href="#">Section 3</a></li>
+          <li><a class="main-nav-link" href="#">Section 4</a></li>
+          <li><a class="main-nav-link nav-cta" href="#">Section 5</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">The way you always wanted to read docs</h1>
+            <p class="hero-description">Simplify your coding process with our centralized platform. Access all tech
+              documentation, from languages to
+              libraries, in one place. Focus on what matters - Simplify your coding experience with us.</p>
+            <a href="#" class="btn btn--full margin-right-sm">Read Docs</a>
+            <a href="#" class="btn btn--outline">Join the Community &rarr;</a>
+            <div class="reviewers">
+              <div class="reviewer-imgs">
+                <!-- random user images here -->
+              </div>
+              <p class="docs-text">
+                <span>250+</span>
+                programming, api and devops docs
+              </p>
             </div>
-            <p class="docs-text">
-              <span>250+</span>
-              programming, api and devops docs
-            </p>
+          </div>
+          <div class="hero-img-box">
+            <img src="images/heroimg.jpg" class="hero-img" alt="A guy reading docs on his computer" />
           </div>
         </div>
-        <div class="hero-img-box">
-          <img src="images/heroimg.jpg" class="hero-img" alt="A guy reading docs on his computer" />
+      </section>
+
+      <section class="section-how">
+        <div class="container ">
+          <span class="subheading">Explore Diverse Technologies</span>
+          <h2 class="heading-secondary">
+            Unleash the Power of Knowledge
+          </h2>
+
         </div>
-      </div>
-    </section>
+        <div class="container grid grid--2-cols">
+          <!-- STEP 01 -->
+          <div class="step-text-box">
+            <p class="step-number">01</p>
+            <h3 class="heading-teritary">
+              Diverse Technology Coverage
+            </h3>
+            <p>step-description</p>
+            From popular programming languages like JavaScript, Python, and Java to cutting-edge frameworks like React,
+            Angular, and Vue.js, our documentation covers a diverse range of technologies. You can explore different
+            domains such as web development, mobile app development, data science, artificial intelligence, and more.
+          </div>
+          <div class="step-img-box">
+            <img src="./images/app/screen-1.jpg" alt="references selections screen" class="step-img" />
+          </div>
+          <!-- STEP 02 -->
+          <div class="step-img-box">
+            <img src="./images/app/screen-2.jpg" alt="references documentation screen" class="step-img" />
+          </div>
+          <div class="step-text-box">
+            <p class="step-number">02</p>
+            <h3 class="heading-tertiary">
+              Extensive Documentation Library
+            </h3>
+            <p>step-description</p>
+            Our platform offers an extensive library of documentation, covering a wide range of technologies. Whether
+            you're interested in programming languages, frameworks, or tools, we've curated a comprehensive collection
+            to cater to your needs. Our library provides valuable resources for beginners and experienced developers
+            alike.
+          </div>
+          <!-- STEP 03 -->
+          <div class="step-text-box">
+            <p class="step-number">03</p>
+            <h3 class="heading-teritary">
+              Unlock Your Technical Expertise
+            </h3>
+            <p>step-description</p>
+            No matter your skill level, our platform is designed to help you expand your technical expertise. Whether
+            you're starting your coding journey or looking to enhance your existing knowledge, our resources offer
+            learning materials, tutorials, best practices, and practical examples. With our platform, you can discover
+            new technologies, gain insights, and unlock endless possibilities for your projects.
+          </div>
+          <div class="step-img-box">
+            <img src="./images/app/screen-3.jpg" alt="references reading screen" class="step-img" />
+          </div>
+
+        </div>
+      </section>
+    </main>
+
     <script src="scripts/randomReviewers.js" defer></script>
   </body>
 
