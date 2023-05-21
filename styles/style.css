@@ -26,85 +26,6 @@ body {
 }
 
 /**********************/
-/* GENERAL COMPONENTS */
-/**********************/
-
-.container {
-  /* 1140 px is also a convention */
-  max-width: 120rem;
-  margin: 0 auto;
-  padding: 0 3.2rem;
-}
-
-.grid {
-  display: grid;
-  gap: 9.6rem;
-}
-
-.grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.heading-primary {
-  font-size: 5.2rem;
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.6px;
-  color: #333;
-  margin-bottom: 3.2rem;
-}
-
-.btn:link,
-.btn:visited {
-  display: inline-block;
-  font-size: 2rem;
-  text-decoration: none;
-  padding: 1.6rem 3.2rem;
-  border-radius: 9px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.btn--full:link,
-.btn--full:visited {
-  background-color: #a435f0;
-  color: #fff;
-  font-weight: 600;
-}
-
-.btn--full:hover,
-.btn--full:active {
-  background-color: #7325a8;
-}
-
-.btn--outline:link,
-.btn--outline:visited {
-  background-color: #fff;
-  color: #555;
-}
-
-.btn--outline:hover,
-.btn--outline:active {
-  background-color: #e4c2fb;
-  color: #fff;
-  /* border:3px solid #fff; */
-  /* box-shadow: inset 0 0 0 3px #fff;
-   */
-  box-shadow: inset 0 0 6px #fff, inset 0 0 3px #fff, inset 0 0 1px #fff;
-}
-
-.margin-right-sm {
-  margin-right: 1.6rem !important;
-}
-
-/**********************/
 /* HEADER */
 /**********************/
 
@@ -235,16 +156,160 @@ body {
 
 .section-how {
   padding: 9.6px 0;
-  /* background-color: ; */
 }
 
-/* .section-how div div {
-  padding: 4.8rem;
-  font-size: 5rem;
-  color: #fff;
-  background-color: salmon;
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  letter-spacing: 0.75px;
+}
+
+.step-text-box {
+  position: relative;
+}
+
+.step-text-box::before,
+.step-text-box::after {
+  content: '';
+  display: block;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.9); /* Example shadow */
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  opacity: 0.7;
+}
+
+.step-text-box::before {
+  width: 40%;
+  padding: 50%;
+  border-radius: 40%;
+  background: linear-gradient(
+    to top left,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+  background-color: #f4e7fd;
+  /* box-shadow: 0 0 20px rgba(244, 231, 253, 0.9); */
+  z-index: -2;
+  animation-name: rotate-slow;
+}
+
+.step-text-box::after {
+  width: 45%;
+  padding: 50%;
+  border-radius: 40%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  background-color: #efd8ff;
+  /* box-shadow: 0 0 20px rgba(230, 221, 236, 0.9); */
+  z-index: -1;
+  animation-name: rotate-fast;
+}
+
+/* .step-img-box::before,
+.step-img-box::after {
+  content: '';
+  display: block;
+  border-radius: 48%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+}
+
+.step-img-box::before {
+  width: 120%;
+  transform: scale(1.2);
+
+  padding-bottom: 120%;
+
+  background-color: #f4e7fd;
+  box-shadow: 0 0 20px rgba(244, 231, 253, 0.5);
+  z-index: -2;
+}
+
+.step-img-box::after {
+  width: 90%;
+
+  padding-bottom: 90%;
+
+  background-color: #e9cefc;
+  box-shadow: 0 0 20px rgba(244, 231, 253, 0.5);
+
+  z-index: -1;
+  animation-name: rotate-fast;
 } */
 
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 .step-img {
-  width: 50%;
+  width: 70%;
+  border-radius: 1rem;
+}
+
+/* animations */
+@keyframes rotate-slow {
+  0% {
+    transform: translate(-50%, -50%) rotate(9deg);
+  }
+
+  25% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-9deg);
+  }
+
+  75% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(9deg);
+  }
+}
+
+@keyframes rotate-fast {
+  0% {
+    transform: translate(-50%, -50%) rotate(-9deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(9deg);
+  }
+
+  75% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-9deg);
+  }
 }
