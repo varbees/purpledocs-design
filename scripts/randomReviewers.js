@@ -25,7 +25,7 @@ async function generateFaces(parentSelector, numFaces) {
     const imgPromise = fetch(URL)
       .then(res => res.json())
       .then(data => {
-        const imgSrc = data.results[0].picture.large;
+        const imgSrc = data.results[0].picture.medium;
         const imgEle = new Image();
         imgEle.src = imgSrc;
         imgEle.alt = `random user ${i}`;
